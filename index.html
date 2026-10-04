@@ -329,11 +329,14 @@ function openEmail(event) {
     if (isMobile) {
         window.location.href = "mailto:" + email + "?subject=" + subject;
     } else {
-        window.location.href =
+        window.open(
             "https://mail.google.com/mail/?view=cm&fs=1&to=" +
             email +
             "&su=" +
-            subject;
+            subject,
+            "gmailCompose",
+            "width=800,height=700,resizable=yes,scrollbars=yes"
+        );
     }
 }
 </script></body>
