@@ -1,708 +1,252 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-<title>Neurolyte | Vesper Poultry Solutions</title>
-
-<style>
-:root{
-  --navy:#173f7a;
-  --red:#c93434;
-  --muted:#64748b;
-  --line:#d9e1ec;
-  --light:#f5f8fc;
-  --shadow:0 8px 24px rgba(20,45,90,.08);
-}
-
-*{
-  box-sizing:border-box;
-}
-
-body{
-  margin:0;
-  font-family:Arial,Helvetica,sans-serif;
-  background:#fff;
-  color:#17233a;
-  line-height:1.65;
-}
-
-.wrap{
-  width:min(1180px,92%);
-  margin:0 auto;
-}
-
-/* TOP BAR */
-
-.topbar{
-  background:#09183e;
-  color:white;
-  padding:10px 0;
-  font-size:13px;
-}
-
-.topbar .wrap{
-  display:flex;
-  justify-content:space-between;
-}
-
-/* NAVIGATION */
-
-.nav{
-  background:#fff;
-  border-bottom:1px solid var(--line);
-}
-
-.nav-inner{
-  min-height:76px;
-  display:flex;
-  align-items:center;
-  justify-content:space-between;
-}
-
-.brand{
-  text-decoration:none;
-  color:var(--navy);
-  display:flex;
-  align-items:center;
-  gap:10px;
-}
-
-.brand img{
-  height:48px;
-  width:auto;
-}
-
-.brand-text{
-  display:flex;
-  flex-direction:column;
-}
-
-.brand-text strong{
-  font-size:18px;
-}
-
-.brand-text small{
-  font-size:9px;
-  letter-spacing:.08em;
-}
-
-.navlinks{
-  display:flex;
-  gap:28px;
-}
-
-.navlinks a{
-  text-decoration:none;
-  color:var(--navy);
-  font-size:14px;
-  font-weight:600;
-}
-
-/* HERO */
-
-.hero{
-  padding:55px 0 70px;
-}
-
-.hero-grid{
-  display:grid;
-  grid-template-columns:1fr 540px;
-  gap:55px;
-  align-items:center;
-}
-
-.eyebrow{
-  color:var(--red);
-  font-size:15px;
-  font-weight:800;
-  letter-spacing:.12em;
-  text-transform:uppercase;
-}
-
-.hero h1{
-  color:var(--navy);
-  font-size:54px;
-  line-height:1.05;
-  margin:80px 0 12px;
-}
-
-.hero-tagline{
-  color:var(--red);
-  font-size:22px;
-  margin-bottom:38px;
-}
-
-.hero-description{
-  color:var(--navy);
-  font-size:20px;
-}
-
-.hero-image{
-  height:390px;
-  border-radius:10px;
-  overflow:hidden;
-  background:#edf1f8;
-}
-
-.hero-image img{
-  width:100%;
-  height:100%;
-  object-fit:cover;
-}
-
-/* ARTICLE SECTIONS */
-
-.article{
-  border-top:1px solid var(--line);
-  padding:62px 0;
-}
-
-.article h2{
-  color:var(--red);
-  font-size:30px;
-  margin:0 0 20px;
-}
-
-.article h3{
-  color:var(--navy);
-  font-size:24px;
-  margin:35px 0 15px;
-}
-
-.article p{
-  color:#172f57;
-  font-size:17px;
-  max-width:1100px;
-}
-
-.article ul{
-  color:#172f57;
-  font-size:17px;
-  padding-left:25px;
-}
-
-.article li{
-  margin-bottom:9px;
-}
-
-/* PRODUCT INFORMATION */
-
-.product-information{
-  border-top:1px solid var(--line);
-  padding:58px 0 70px;
-}
-
-.product-information > .wrap > h2{
-  color:var(--navy);
-  font-size:42px;
-  margin:0 0 35px;
-}
-
-.info-grid{
-  display:grid;
-  grid-template-columns:1fr 1fr;
-  gap:28px;
-}
-
-.info-card{
-  background:#f5f8fc;
-  border:1px solid #d2deee;
-  border-radius:12px;
-  padding:28px;
-  min-height:205px;
-}
-
-.info-card h3{
-  color:var(--navy);
-  font-size:28px;
-  margin:0 0 22px;
-}
-
-.info-card p{
-  color:#172f57;
-  font-size:18px;
-  margin:0;
-}
-
-.info-card ul{
-  color:#172f57;
-  font-size:18px;
-  padding-left:22px;
-  margin:0;
-}
-
-.info-card li{
-  margin-bottom:8px;
-}
-
-.usage-line{
-  margin-bottom:12px !important;
-}
-
-/* ACTIONS */
-
-.actions{
-  margin-top:35px;
-  display:flex;
-  gap:12px;
-  flex-wrap:wrap;
-}
-
-.primary-btn,
-.outline-btn{
-  display:inline-block;
-  padding:12px 20px;
-  border-radius:7px;
-  text-decoration:none;
-  font-size:14px;
-  font-weight:700;
-}
-
-.primary-btn{
-  background:var(--navy);
-  color:#fff;
-}
-
-.outline-btn{
-  border:1px solid var(--navy);
-  color:var(--navy);
-}
-
-/* FOOTER */
-
-.footer{
-  background:#09183e;
-  color:#fff;
-  padding:40px 0;
-}
-
-.footer-grid{
-  display:flex;
-  justify-content:space-between;
-}
-
-.footer small{
-  color:#b9c5e7;
-}
-
-/* MOBILE */
-
-@media(max-width:900px){
-
-  .hero-grid{
-    grid-template-columns:1fr;
-  }
-
-  .hero h1{
-    margin-top:35px;
-  }
-
-  .hero-image{
-    height:350px;
-  }
-
-  .info-grid{
-    grid-template-columns:1fr;
-  }
-}
-
-@media(max-width:620px){
-
-  .navlinks{
-    display:none;
-  }
-
-  .hero{
-    padding:40px 0;
-  }
-
-  .hero h1{
-    font-size:42px;
-  }
-
-  .hero-tagline{
-    font-size:19px;
-  }
-
-  .hero-image{
-    height:290px;
-  }
-
-  .info-card{
-    padding:22px;
-  }
-
-  .info-card h3{
-    font-size:24px;
-  }
-
-  .topbar .wrap{
-    display:block;
-  }
-}
-</style>
-</head>
-
-<body>
-
-<div class="topbar">
-  <div class="wrap">
-    <span>VESPER POULTRY SOLUTIONS</span>
-    <span>Since 1978</span>
+<html><head><meta charset="utf-8"/><meta content="width=device-width,initial-scale=1" name="viewport"/><title>NEUROLYTE | Vesper Poultry Solutions</title><style>*{box-sizing:border-box}body{margin:0;font-family:Inter,Arial,sans-serif;color:#18223a;background:#fff;line-height:1.65}.top{background:#203873;color:#fff;padding:14px 0}.wrap{max-width:1050px;margin:auto;padding:0 28px}.nav{font-size:13px;display:flex;justify-content:space-between}.nav a{color:#fff;text-decoration:none}.hero{padding:52px 0 42px}.crumb{font-size:12px;text-transform:uppercase;letter-spacing:.12em;color:#b43a3d;font-weight:800}.hero-grid{display:grid;grid-template-columns:1fr 360px;gap:45px;align-items:center}.hero h1{font-size:50px;line-height:1.05;color:#203873;margin:16px 0 8px}.tag{font-size:20px;color:#c63136;margin:0 0 22px}.lead{font-size:18px;color:#38445c}.bird{width:100%;height:260px;object-fit:cover;border-radius:4px}.rule{height:1px;background:#d9dee8;margin:8px 0 42px}.section{padding:0 0 42px}.section h2{font-size:29px;color:#203873;margin:0 0 10px}.section h3{font-size:20px;color:#b33a3f;margin:26px 0 8px}.section p{margin:8px 0}.info-grid{display:grid;grid-template-columns:1fr 1fr;gap:18px;margin-top:18px}.box{border:1px solid #d7dfeb;border-radius:8px;padding:18px;background:#f7faff}.box h3{margin:0 0 9px;color:#203873;font-size:18px}.box ul{margin:6px 0 0;padding-left:20px}.data{width:100%;border-collapse:collapse;margin:18px 0;font-size:13px}.data th,.data td{border:1px solid #cbd7e5;padding:9px;vertical-align:top}.data th{background:#eaf2fb;color:#203873;text-align:left}.data tr:nth-child(even) td{background:#fafbfd}.small{font-size:12px;color:#66728a}.footer{border-top:1px solid #d9dee8;padding:25px 0 45px;color:#5c6880;font-size:12px}.product-image{max-width:320px;max-height:250px;object-fit:contain}.diagram{width:100%;max-width:900px;display:block;margin:16px auto}.trial{background:#f7faff;border-left:4px solid #b43a3d;padding:16px;margin:16px 0}.back{display:inline-block;margin-top:18px;color:#203873;font-weight:800;text-decoration:none}@media(max-width:800px){.hero-grid,.info-grid{grid-template-columns:1fr}.hero h1{font-size:38px}.bird{height:220px}}
+.format-line{display:block;margin:0 0 10px}.format-line:last-child{margin-bottom:0}</style></head><body>
+
+<div class="top">
+  <div class="wrap nav">
+    <span>Vesper Poultry Solutions</span>
+    <span>
+      <a href="../index.html">Our Products</a> &nbsp;|&nbsp;
+      <a href="../index.html#enquiry">Enquire</a>
+    </span>
   </div>
 </div>
 
-<nav class="nav">
-  <div class="wrap nav-inner">
+<header class="hero">
+  <div class="wrap">
 
-    <a class="brand" href="../index.html">
+    <div class="crumb">Our Products / NEUROLYTE</div>
 
-      <img src="../assets/vesper-logo.png"
-           alt="Vesper logo">
+    <div class="hero-grid">
 
-      <span class="brand-text">
-        <strong>Vesper Group</strong>
-        <small>POULTRY NUTRITION &amp; HEALTH</small>
-      </span>
+      <div>
+        <h1>NEUROLYTE</h1>
 
-    </a>
+        <p class="tag">
+          Provides vital endurance to mind and body
+        </p>
 
-    <div class="navlinks">
-      <a href="../index.html#products">Products</a>
-      <a href="../index.html#enquiry">Enquire</a>
+        <p class="lead">
+          Product information and technical overview.
+        </p>
+      </div>
+
+      <img
+        alt="Poultry bird showing lameness"
+        class="bird"
+        src="../assets/neurolyte-lameness.jpg"
+      />
+
     </div>
 
   </div>
-</nav>
+</header>
+
+<main class="wrap">
+
+<div class="rule"></div>
+
+<section class="section">
+
+  <h3>Neuromuscular transmission and lameness</h3>
+
+  <p>
+    Neurolyte supports timely message transmission for effective
+    neuromuscular function in poultry. It is formulated with selected
+    vitamins, electrolytes (microminerals) and amino nitrogen to address
+    nutritional factors associated with lameness.
+  </p>
+
+  <h3>History of lameness in birds</h3>
+
+  <p>
+    Lameness has been a persistent problem in poultry production.
+    Nutritional deficiency is a basic factor associated with the condition.
+    Even when nutrients are provided in slight excesses, lameness may
+    continue because several factors can affect nutrient availability,
+    absorption and utilization.
+  </p>
+
+  <h3>Factors associated with lameness</h3>
+
+  <p>
+    Factors may include poor-quality vitamin-mineral mixes, improper
+    mixing, deficiency of a nutrient or its precursor, anticoccidial and
+    antibacterial administration, improper pelleting or extrusion,
+    heat treatment, poor-quality fish meal, unbalanced diets and
+    malabsorption.
+  </p>
+
+  <h3>The role of calcium and phosphorous</h3>
+
+  <p>
+    Calcium and phosphorous supplementation may help when lameness is
+    caused by deficiency of these nutrients. However, lameness can also
+    arise from other nutritional factors. Excess calcium may interfere
+    with absorption of other vital divalent cations such as manganese
+    and zinc.
+  </p>
+
+  <h3>The rationale of the composition</h3>
+
+  <p>
+    Neurolyte combines nutritional factors involved in neurotransmitter
+    release, muscle contraction, nerve structure and maintenance of the
+    resting membrane potential.
+  </p>
+
+  <h3>Thiamine</h3>
+
+  <p>
+    Influences acetylcholine release from presynaptic neurons.
+  </p>
+
+  <h3>Calcium</h3>
+
+  <p>
+    Supports the release of acetylcholine and the contraction process
+    in skeletal muscle.
+  </p>
+
+  <h3>Phosphorous</h3>
+
+  <p>
+    Acts as a phosphate buffer and supports mechanisms associated with
+    acetylcholine receptor synthesis.
+  </p>
+
+  <h3>Vitamin D3</h3>
+
+  <p>
+    Supports proper absorption and metabolism of calcium and phosphorous.
+  </p>
+
+  <h3>Riboflavin</h3>
+
+  <p>
+    Supports axial cylinder strength and myelination of nerves.
+  </p>
+
+  <h3>Choline</h3>
+
+  <p>
+    Supports synthesis of the neurotransmitter acetylcholine in
+    motoneurons.
+  </p>
+
+  <h3>Amino nitrogen</h3>
+
+  <p>
+    Supports synthesis and development of postsynaptic acetylcholine
+    receptors at the motor endplate.
+  </p>
+
+  <h3>Zinc</h3>
+
+  <p>
+    Supports neuromuscular activity and can potentiate contraction
+    mechanisms at appropriate nutritional levels.
+  </p>
+
+  <h3>Manganese</h3>
+
+  <p>
+    Acts as a complementary nutritional factor in neuromuscular activity.
+  </p>
+
+  <h3>Sodium, potassium and chloride</h3>
+
+  <p>
+    Help maintain the resting membrane potential and support normal
+    activity of excitable cells.
+  </p>
+
+  <h3>Balanced neuromuscular transmission</h3>
+
+  <p>
+    Neurolyte supports neurotransmitter release from the presynaptic
+    neuron, the action of acetylcholine at the motor endplate and the
+    synthesis and development of acetylcholine receptors. Together,
+    these functions support balanced transmission across the
+    neuromuscular junction.
+  </p>
+
+</section>
 
 
-<!-- HERO -->
+<section class="section">
 
-<header class="hero">
+  <h2>Product information</h2>
 
-  <div class="wrap hero-grid">
+  <div class="info-grid">
 
-    <div>
+    <div class="box">
 
-      <div class="eyebrow">
-        OUR PRODUCTS / NEUROLYTE
-      </div>
+      <h3>Composition</h3>
 
-      <h1>NEUROLYTE</h1>
-
-      <div class="hero-tagline">
-        Provides vital endurance to mind and body
-      </div>
-
-      <p class="hero-description">
-        Product information and technical overview.
+      <p>
+        Thiamine, Choline, Zinc, Manganese, Riboflavin, Vitamin D3,
+        Amino nitrogen (Peptide moiety), Sodium Citrate, Potassium
+        Chloride with Organic Calcium and Phosphorous in an energy
+        rich base.
       </p>
 
     </div>
 
-    <div class="hero-image">
 
-      <img src="../assets/neurolyte-lameness.jpg"
-           alt="Poultry bird showing lameness">
+    <div class="box">
 
-    </div>
+      <h3>Indications / Uses</h3>
 
-  </div>
+      <ul>
 
-</header>
+        <li>
+          To reduce the incidence and severity of lameness due to
+          nutritional deficiency.
+        </li>
 
+        <li>
+          To reduce the incidence and severity of after-effects of
+          Ranikhet disease (RD/ND).
+        </li>
 
-<!-- ARTICLE -->
+        <li>
+          To reduce the incidence and severity of vaccination reactions.
+        </li>
 
-<section class="article">
-
-  <div class="wrap">
-
-    <h2>Neuromuscular transmission in poultry</h2>
-
-    <p>
-      Effective neuromuscular transmission is essential for coordinated
-      movement and normal muscular activity in poultry. Neurolyte provides
-      nutritional support for the factors involved in timely message
-      transmission and effective neuromuscular function.
-    </p>
-
-    <p>
-      The formulation combines selected vitamins, electrolytes
-      (microminerals) and amino nitrogen to support the nutritional
-      requirements associated with neuromuscular transmission.
-    </p>
-
-  </div>
-
-</section>
-
-
-<section class="article">
-
-  <div class="wrap">
-
-    <h2>History of lameness in birds</h2>
-
-    <p>
-      Lameness has been a persistent problem in poultry production.
-      Nutritional deficiency is an important underlying factor. The
-      condition may continue even when nutrients are provided in slight
-      excesses because several factors can influence nutritional
-      availability and utilization.
-    </p>
-
-    <p>
-      Factors associated with lameness include poor-quality vitamin-mineral
-      mixes, improper mixing, deficiency of a nutrient or its precursor,
-      anticoccidial and antibacterial administration, improper pelleting
-      or extrusion, heat treatment, poor-quality fish meal, unbalanced
-      diets and malabsorption.
-    </p>
-
-  </div>
-
-</section>
-
-
-<section class="article">
-
-  <div class="wrap">
-
-    <h2>Factors involved in lameness</h2>
-
-    <p>
-      Lameness should not be approached only through calcium,
-      phosphorous and vitamin D3 supplementation. While these nutrients
-      are important when deficient, other nutritional factors can also
-      influence neuromuscular function.
-    </p>
-
-    <p>
-      Excess calcium may also interfere with the absorption of other
-      vital divalent cations such as manganese and zinc. A balanced
-      nutritional approach is therefore important when addressing
-      neuromuscular problems in poultry.
-    </p>
-
-  </div>
-
-</section>
-
-
-<section class="article">
-
-  <div class="wrap">
-
-    <h2>Rationale of the composition</h2>
-
-    <p>
-      Neurolyte combines nutritional factors involved in neurotransmitter
-      activity, muscle contraction, nerve structure and maintenance of
-      membrane potential.
-    </p>
-
-    <h3>Thiamine</h3>
-
-    <p>
-      Supports acetylcholine release from the presynaptic neuron.
-    </p>
-
-    <h3>Calcium</h3>
-
-    <p>
-      Supports acetylcholine release and the contraction process in
-      skeletal muscle.
-    </p>
-
-    <h3>Phosphorous</h3>
-
-    <p>
-      Acts as a phosphate buffer and supports mechanisms associated
-      with acetylcholine receptor synthesis.
-    </p>
-
-    <h3>Vitamin D3</h3>
-
-    <p>
-      Supports proper absorption and metabolism of calcium and phosphorous.
-    </p>
-
-    <h3>Riboflavin</h3>
-
-    <p>
-      Supports axial cylinder strength and myelination of nerves.
-    </p>
-
-    <h3>Choline</h3>
-
-    <p>
-      Supports synthesis of the neurotransmitter acetylcholine in
-      motoneurons.
-    </p>
-
-    <h3>Amino Nitrogen</h3>
-
-    <p>
-      Supports synthesis and development of postsynaptic acetylcholine
-      receptors at the motor endplate.
-    </p>
-
-    <h3>Zinc and Manganese</h3>
-
-    <p>
-      Support mechanisms involved in neuromuscular activity and
-      transmission.
-    </p>
-
-    <h3>Sodium, Potassium and Chloride</h3>
-
-    <p>
-      Help maintain the resting membrane potential of excitable cells.
-    </p>
-
-  </div>
-
-</section>
-
-
-<section class="article">
-
-  <div class="wrap">
-
-    <h2>Balanced neuromuscular transmission</h2>
-
-    <ul>
-
-      <li>
-        Supports neurotransmitter release from the presynaptic neuron.
-      </li>
-
-      <li>
-        Supports the action of acetylcholine at the motor endplate.
-      </li>
-
-      <li>
-        Supports synthesis and development of acetylcholine receptors
-        at the motor endplate.
-      </li>
-
-      <li>
-        Supports balanced transmission across the neuromuscular junction.
-      </li>
-
-    </ul>
-
-  </div>
-
-</section>
-
-
-<!-- PRODUCT INFORMATION -->
-
-<section class="product-information">
-
-  <div class="wrap">
-
-    <h2>Product information</h2>
-
-    <div class="info-grid">
-
-      <!-- COMPOSITION -->
-
-      <div class="info-card">
-
-        <h3>Composition</h3>
-
-        <p>
-          Thiamine, Choline, Zinc, Manganese, Riboflavin, Vitamin D3,
-          Amino nitrogen (Peptide moiety), Sodium Citrate, Potassium
-          Chloride with Organic Calcium and Phosphorous in an energy
-          rich base.
-        </p>
-
-      </div>
-
-
-      <!-- INDICATIONS -->
-
-      <div class="info-card">
-
-        <h3>Indications / Uses</h3>
-
-        <ul>
-
-          <li>
-            To reduce the incidence and severity of lameness due to
-            nutritional deficiency.
-          </li>
-
-          <li>
-            To reduce the severity of after-effects of Ranikhet disease
-            (RD/ND).
-          </li>
-
-          <li>
-            To reduce the incidence and severity of vaccination reactions.
-          </li>
-
-        </ul>
-
-      </div>
-
-
-      <!-- USAGE -->
-
-      <div class="info-card">
-
-        <h3>Usage Instructions</h3>
-
-        <p class="usage-line">
-          <strong>During the first three days of chick's life:</strong>
-          1 ml per litre of water.
-        </p>
-
-        <p class="usage-line">
-          <strong>To reduce the severity of lameness:</strong>
-          1–2 ml per litre of water.
-        </p>
-
-        <p>
-          Or as recommended by the Veterinarian.
-        </p>
-
-      </div>
-
-
-      <!-- PRESENTATION -->
-
-      <div class="info-card">
-
-        <h3>Presentation</h3>
-
-        <p>
-          5 litre and 1 litre bottles.
-        </p>
-
-      </div>
+      </ul>
 
     </div>
 
 
-    <div class="actions">
+    <div class="box">
 
-      <a class="primary-btn"
-         href="../assets/Neurolyte_brochure.pdf"
-         target="_blank">
-        Open Product Brochure
-      </a>
+      <h3>Usage Instructions</h3>
 
-      <a class="outline-btn"
-         href="../index.html#enquiry">
-        Enquire
-      </a>
+      <p>
+        <strong>During the first three days of chick's life:</strong>
+        1 ml per litre of water.
+      </p>
+
+      <p>
+        <strong>To reduce severity of lameness:</strong>
+        1–2 ml per litre of water.
+      </p>
+
+      <p>
+        Or as recommended by the Veterinarian.
+      </p>
+
+    </div>
+
+
+    <div class="box">
+
+      <h3>Presentation</h3>
+
+      <p>
+        500 ml and 1 litre bottles.
+      </p>
 
     </div>
 
@@ -711,22 +255,22 @@ body{
 </section>
 
 
-<footer class="footer">
+<div class="footer">
 
-  <div class="wrap footer-grid">
+  Vesper Pharmaceuticals &nbsp;•&nbsp; Since 1978<br/>
 
-    <div>
-      <strong>VESPER POULTRY SOLUTIONS</strong>
-      <small>Poultry nutrition, health and performance solutions.</small>
-    </div>
+  <span class="small">
+    Vesper Poultry Solutions — product information for poultry nutrition and health.
+  </span>
 
-    <div>
-      <small>Since 1978</small>
-    </div>
+  <br/>
 
-  </div>
+  <a class="back" href="../index.html">
+    ← Back to Product Catalogue
+  </a>
 
-</footer>
+</div>
 
-</body>
-</html>
+</main>
+
+</body></html>
