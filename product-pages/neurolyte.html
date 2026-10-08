@@ -1,0 +1,536 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
+<title>Neurolyte | Vesper Poultry Solutions</title>
+
+<meta name="description"
+content="Neurolyte — nutritional support for neuromuscular transmission and lameness management in poultry."/>
+
+<style>
+:root{
+  --blue:#0b3b82;
+  --blue2:#1769c2;
+  --red:#d71920;
+  --text:#17233a;
+  --muted:#667085;
+  --line:#dfe5ee;
+  --bg:#f7f9fc;
+  --card:#ffffff;
+  --shadow:0 10px 30px rgba(20,45,90,.08);
+}
+
+*{
+  box-sizing:border-box;
+}
+
+body{
+  margin:0;
+  font-family:Arial,Helvetica,sans-serif;
+  color:var(--text);
+  background:var(--bg);
+}
+
+.wrap{
+  width:min(1180px,92%);
+  margin:auto;
+}
+
+.header{
+  background:#fff;
+  border-bottom:1px solid var(--line);
+}
+
+.header-inner{
+  min-height:82px;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:30px;
+}
+
+.logo{
+  height:55px;
+  width:auto;
+}
+
+.navlinks{
+  display:flex;
+  gap:28px;
+}
+
+.navlinks a{
+  color:var(--text);
+  text-decoration:none;
+  font-size:14px;
+  font-weight:600;
+}
+
+.navlinks a:hover{
+  color:var(--blue2);
+}
+
+.product-page{
+  padding:60px 0 80px;
+}
+
+.back{
+  display:inline-block;
+  margin-bottom:30px;
+  color:var(--blue);
+  text-decoration:none;
+  font-size:14px;
+  font-weight:600;
+}
+
+.product-detail{
+  display:grid;
+  grid-template-columns:420px 1fr;
+  gap:55px;
+  align-items:start;
+  background:#fff;
+  border:1px solid var(--line);
+  border-radius:20px;
+  padding:32px;
+  box-shadow:var(--shadow);
+}
+
+.product-visual{
+  width:100%;
+  height:430px;
+  border-radius:16px;
+  overflow:hidden;
+  background:#edf1f8;
+}
+
+.product-visual img{
+  width:100%;
+  height:100%;
+  object-fit:cover;
+}
+
+.category{
+  color:var(--red);
+  font-size:12px;
+  font-weight:700;
+  letter-spacing:.08em;
+  text-transform:uppercase;
+  margin-bottom:8px;
+}
+
+h1{
+  color:var(--blue);
+  font-size:42px;
+  margin:0 0 10px;
+  line-height:1.1;
+}
+
+.subtitle{
+  font-size:19px;
+  color:var(--muted);
+  margin:0 0 28px;
+  line-height:1.5;
+}
+
+.divider{
+  height:1px;
+  background:var(--line);
+  margin:25px 0;
+}
+
+h2{
+  color:var(--blue);
+  font-size:23px;
+  margin:0 0 15px;
+}
+
+p{
+  line-height:1.65;
+}
+
+.feature-grid{
+  display:grid;
+  grid-template-columns:repeat(2,1fr);
+  gap:14px;
+  margin:25px 0;
+}
+
+.feature{
+  border:1px solid var(--line);
+  border-radius:12px;
+  padding:16px;
+  background:#fbfcfe;
+}
+
+.feature strong{
+  display:block;
+  color:var(--blue);
+  margin-bottom:5px;
+  font-size:14px;
+}
+
+.feature span{
+  font-size:13px;
+  color:var(--muted);
+  line-height:1.45;
+}
+
+.info-section{
+  background:#fff;
+  border:1px solid var(--line);
+  border-radius:20px;
+  padding:35px;
+  margin-top:25px;
+  box-shadow:var(--shadow);
+}
+
+.info-grid{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:40px;
+}
+
+ul{
+  padding-left:20px;
+  line-height:1.7;
+}
+
+.usage-row{
+  margin-bottom:18px;
+}
+
+.usage-title{
+  font-weight:700;
+  color:var(--blue);
+  margin-bottom:5px;
+}
+
+.presentation{
+  font-weight:600;
+}
+
+.outline-btn{
+  display:inline-block;
+  border:1px solid var(--blue2);
+  color:var(--blue2);
+  padding:11px 18px;
+  border-radius:8px;
+  text-decoration:none;
+  font-size:14px;
+  font-weight:600;
+}
+
+.outline-btn:hover{
+  background:#eef5ff;
+}
+
+.footer{
+  border-top:1px solid var(--line);
+  background:#fff;
+  padding:30px 0;
+}
+
+.footer-grid{
+  display:flex;
+  justify-content:space-between;
+  gap:30px;
+}
+
+.footer strong{
+  display:block;
+  color:var(--blue);
+  margin-bottom:7px;
+}
+
+.footer small{
+  color:var(--muted);
+}
+
+@media(max-width:900px){
+
+  .product-detail{
+    grid-template-columns:1fr;
+  }
+
+  .product-visual{
+    height:350px;
+  }
+
+  .info-grid{
+    grid-template-columns:1fr;
+  }
+
+}
+
+@media(max-width:600px){
+
+  .header-inner{
+    min-height:70px;
+  }
+
+  .navlinks{
+    gap:15px;
+  }
+
+  .product-page{
+    padding:35px 0 50px;
+  }
+
+  .product-detail,
+  .info-section{
+    padding:22px;
+  }
+
+  h1{
+    font-size:32px;
+  }
+
+  .feature-grid{
+    grid-template-columns:1fr;
+  }
+
+  .product-visual{
+    height:280px;
+  }
+
+}
+</style>
+</head>
+
+<body>
+
+<header class="header">
+<div class="wrap header-inner">
+
+<a href="../index.html">
+<img class="logo"
+     src="../assets/vesper-logo.png"
+     alt="Vesper"/>
+</a>
+
+<nav class="navlinks">
+<a href="../index.html#products">Products</a>
+<a href="../index.html#enquiry">Enquire</a>
+</nav>
+
+</div>
+</header>
+
+
+<main class="product-page">
+
+<div class="wrap">
+
+<a class="back" href="../index.html#products">
+← Back to Products
+</a>
+
+
+<section class="product-detail">
+
+<div class="product-visual">
+<img src="../assets/poultry-head.png"
+     alt="Commercial poultry farm"/>
+</div>
+
+
+<div>
+
+<div class="category">
+Specialized Support
+</div>
+
+<h1>NEUROLYTE</h1>
+
+<p class="subtitle">
+Provides vital endurance to mind and body and supports timely message transmission for effective neuromuscular function.
+</p>
+
+
+<div class="feature-grid">
+
+<div class="feature">
+<strong>Neuromuscular Transmission</strong>
+<span>
+Supports effective transmission across the neuromuscular junction.
+</span>
+</div>
+
+<div class="feature">
+<strong>Lameness Support</strong>
+<span>
+Helps address lameness associated with nutritional deficiencies.
+</span>
+</div>
+
+<div class="feature">
+<strong>Vaccination Reactions</strong>
+<span>
+Supports birds during vaccination-related reactions.
+</span>
+</div>
+
+<div class="feature">
+<strong>Ranikhet Disease After-effects</strong>
+<span>
+Supports birds experiencing after-effects of Ranikhet disease.
+</span>
+</div>
+
+</div>
+
+<a class="outline-btn"
+   href="../assets/Neurolyte_brochure.pdf"
+   target="_blank">
+View Product Brochure
+</a>
+
+</div>
+
+</section>
+
+
+<section class="info-section">
+
+<div class="info-grid">
+
+<div>
+
+<h2>Product Profile</h2>
+
+<p>
+Neurolyte is a combination of selected vitamins and electrolytes
+(microminerals), along with amino nitrogen, formulated to address
+the root causes associated with lameness.
+</p>
+
+<p>
+The formulation is designed to support neurotransmitter release,
+acetylcholine activity at the motor endplate and balanced transmission
+across the neuromuscular junction.
+</p>
+
+</div>
+
+
+<div>
+
+<h2>Key Ingredients</h2>
+
+<ul>
+<li>Thiamine</li>
+<li>Choline</li>
+<li>Zinc</li>
+<li>Manganese</li>
+<li>Riboflavin</li>
+<li>Vitamin D3</li>
+<li>Amino nitrogen (peptide moiety)</li>
+<li>Sodium citrate</li>
+<li>Potassium chloride</li>
+<li>Organic calcium and phosphorous</li>
+</ul>
+
+</div>
+
+</div>
+
+</section>
+
+
+<section class="info-section">
+
+<h2>Indications</h2>
+
+<ul>
+<li>Lameness due to nutritional deficiency</li>
+<li>After-effects of Ranikhet disease (RD/ND)</li>
+<li>Vaccination reactions</li>
+</ul>
+
+</section>
+
+
+<section class="info-section">
+
+<h2>Usage Instructions</h2>
+
+<div class="usage-row">
+
+<div class="usage-title">
+During the first three days of chick's life
+</div>
+
+<div>
+1 ml per litre of water
+</div>
+
+</div>
+
+
+<div class="usage-row">
+
+<div class="usage-title">
+To reduce the severity of lameness
+</div>
+
+<div>
+1–2 ml per litre of water
+</div>
+
+</div>
+
+
+<div class="usage-row">
+
+<div class="usage-title">
+Veterinary recommendation
+</div>
+
+<div>
+Or as recommended by the Veterinarian.
+</div>
+
+</div>
+
+</section>
+
+
+<section class="info-section">
+
+<h2>Presentation</h2>
+
+<p class="presentation">
+500 ml and 1 litre bottles.
+</p>
+
+</section>
+
+</div>
+
+</main>
+
+
+<footer class="footer">
+
+<div class="wrap footer-grid">
+
+<div>
+<strong>VESPER POULTRY SOLUTIONS</strong>
+<small>
+Vesper Poultry Solutions — poultry nutrition and health solutions
+for efficient production and sustainable performance.
+</small>
+</div>
+
+<div>
+<small>Since 1978</small>
+</div>
+
+</div>
+
+</footer>
+
+</body>
+</html>
